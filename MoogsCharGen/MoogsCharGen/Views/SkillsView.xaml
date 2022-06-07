@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:MoogsCharGen.ViewModel"
+             x:Class="MoogsCharGen.Views.SkillsView"
+             Title="Skills">
+    
+    <ContentPage.BindingContext>
+        <viewmodel:InfoViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="12">
+            
+            <StackLayout Orientation="Vertical" Padding="0" Margin="0" Spacing="0" Grid.Row="0" BindingContext="{Binding CharacterInfo}" HorizontalOptions="CenterAndExpand">
+                <Label Text="{Binding Name}" Grid.Column="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="4">
+                    <Label Text="{Binding Sex}" Grid.Column="1" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                    <Label Text="{Binding Occupation}" Grid.Column="2" TextColor="{StaticResource PrimaryDark}"  FontAttributes="Bold"/>
+                </StackLayout>
+                <Label Text="{Binding Age, StringFormat='{0} year old '}"  Grid.Column="1" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <Line BackgroundColor="{StaticResource PrimaryDark}" HeightRequest="1"/>
+
+            <Grid x:Name="SkillGrid" Margin="0, 2, 0, 2">
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

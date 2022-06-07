@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "k3EHodQFhRkxPsa4yuCZo4L+B27RB4FGNtUnZa80TFjiT744KT5A1B8XPL2DcU+rnghWhdRH3tw+4TRksUu5qw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\BAMN\\Documents\\Learning\\MoogsCharGen\\MoogsCharGen\\MoogsCharGen\\MoogsCharGen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BAMN\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
+    "C:\\Users\\BAMN\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\BAMN\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\BAMN\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\BAMN\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\BAMN\\.nuget\\packages\\xamarin.forms\\5.0.0.2401\\xamarin.forms.5.0.0.2401.nupkg.sha512"
+  ],
+  "logs": []
+}

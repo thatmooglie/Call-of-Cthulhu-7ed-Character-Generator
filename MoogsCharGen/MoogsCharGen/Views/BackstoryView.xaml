@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:MoogsCharGen.ViewModel"
+             x:Class="MoogsCharGen.Views.BackstoryView"
+             Title="Backstory">
+
+    <ContentPage.BindingContext>
+        <viewmodel:BackstoryViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="12">
+            
+            <Label Text="Ideology/Beliefs" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" FontSize="16"/>
+            <Label Text="{Binding Ideology}" TextColor="{StaticResource PrimaryDark}"/>
+            <Label Text=" "/>
+            <Label Text="Significant People" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" FontSize="16"/>
+            <Label Text="{Binding SignificantPerson}" TextColor="{StaticResource PrimaryDark}"/>
+            <Label Text=" "/>
+            <Label Text="Meaningful Location" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" FontSize="16"/>
+            <Label Text="{Binding MeaningfulLocation}" TextColor="{StaticResource PrimaryDark}"/>
+            <Label Text=" "/>
+            <Label Text="Treasured Possession" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" FontSize="16"/>
+            <Label Text="{Binding TreasuredPossessions}" TextColor="{StaticResource PrimaryDark}"/>
+            <Label Text=" "/>
+            <Label Text="Traits" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" FontSize="16"/>
+            <Label Text="{Binding Traits}" TextColor="{StaticResource PrimaryDark}"/>
+            <Label Text=" "/>
+            <Button Text="Generate Backstory"
+                    Margin="20,0,20,0"
+                    VerticalOptions= "EndAndExpand"
+                    Command="{Binding GenerateBackstoryCommand}"
+                    BackgroundColor="{StaticResource PrimaryDark}"
+                    TextColor="{StaticResource Accent}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

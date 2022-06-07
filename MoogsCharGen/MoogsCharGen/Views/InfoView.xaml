@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:MoogsCharGen.ViewModel"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="MoogsCharGen.Views.InfoView"
+             Title="Info">
+
+    <ContentPage.BindingContext>
+        <viewmodel:InfoViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+        <StackLayout Padding="12">
+            
+                <StackLayout Orientation="Vertical" Padding="0" Margin="0" Spacing="0" Grid.Row="0" BindingContext="{Binding CharacterInfo}" HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding Name}" Grid.Column="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="4">
+                        <Label Text="{Binding Sex}" Grid.Column="1" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                        <Label Text="{Binding Occupation}" Grid.Column="2" TextColor="{StaticResource PrimaryDark}"  FontAttributes="Bold"/>
+                    </StackLayout>
+                    <Label Text="{Binding Age, StringFormat='{0} year old '}"  Grid.Column="1" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold" HorizontalOptions="Center"/>
+                </StackLayout>
+
+            <Line BackgroundColor="{StaticResource PrimaryDark}" HeightRequest="1"/>
+            
+            <Grid BindingContext="{Binding Characteristics}"
+                          HorizontalOptions="CenterAndExpand"
+                          Margin="0, 2, 0, 2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="STR" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="DEX" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="POW" Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="SIZ" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="{Binding Str}" Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="{Binding Dex}" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="{Binding Pow}" Grid.Row="1" Grid.Column="2" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="{Binding Siz}" Grid.Row="1" Grid.Column="3" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="APP" Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="EDU" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="CON" Grid.Row="2" Grid.Column="2" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="INT" Grid.Row="2" Grid.Column="3" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="{Binding App}" Grid.Row="3" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="{Binding Edu}" Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="{Binding Con}" Grid.Row="3" Grid.Column="2" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+                <Label Text="{Binding Int}" Grid.Row="3" Grid.Column="3" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource PrimaryDark}"/>
+
+            </Grid>
+
+            <Line BackgroundColor="{StaticResource PrimaryDark}" HeightRequest="1"/>
+
+            <Grid BindingContext="{Binding Stats}"
+                          HorizontalOptions="CenterAndExpand"
+                          Margin="0, 2, 0, 2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="HP" HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                <Label Text="Sanity" HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                <Label Text="Luck" HorizontalOptions="CenterAndExpand" Grid.Column="2"  Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                <Label Text="{Binding HP}" HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1" TextColor="{StaticResource PrimaryDark}"/>
+                <Label Text="{Binding Sanity}" HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="1" TextColor="{StaticResource PrimaryDark}"/>
+                <Label Text="{Binding Luck}" HorizontalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="1" TextColor="{StaticResource PrimaryDark}"/>
+
+            </Grid>
+
+            <Line BackgroundColor="{StaticResource PrimaryDark}" HeightRequest="1"/>
+
+
+            <Grid BindingContext="{Binding Stats}"
+                      HorizontalOptions="CenterAndExpand"
+                      Grid.Row="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                <Label Text="MP" HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                <Label Text="Move" HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                <Label Text="DB" HorizontalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+                <Label Text="Build" HorizontalOptions="CenterAndExpand" Grid.Column="3" Grid.Row="0" TextColor="{StaticResource PrimaryDark}" FontAttributes="Bold"/>
+
+                    <Label Text="{Binding MagicPoints}" HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1" TextColor="{StaticResource PrimaryDark}"/>
+                    <Label Text="{Binding MovementRating}"  HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="1" TextColor="{StaticResource PrimaryDark}"/>
+                    <Label Text="{Binding DamageBonus}" HorizontalOptions="CenterAndExpand" Grid.Column="2" Grid.Row="1" TextColor="{StaticResource PrimaryDark}"/>
+                    <Label Text="{Binding Build}" HorizontalOptions="CenterAndExpand" Grid.Column="3" Grid.Row="1"  TextColor="{StaticResource PrimaryDark}"/>
+                </Grid>
+
+
+            <Line BackgroundColor="{StaticResource PrimaryDark}" HeightRequest="1"/>
+
+            
+
+            
+
+
+            <Grid x:Name="SkillGrid" Margin="0, 2, 0, 2">
+            </Grid>
+
+            <Button Text="Generate Character"
+                    Margin="20,0,20,0"
+                    VerticalOptions= "EndAndExpand"
+                    Command="{Binding GenerateCharacterCommand}"
+                    BackgroundColor="{StaticResource PrimaryDark}"
+                    TextColor="{StaticResource Accent}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

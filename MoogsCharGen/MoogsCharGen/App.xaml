@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoogsCharGen.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Background">#FFFFFF</Color>
+            <Color x:Key="Primary">#338855</Color>
+            <Color x:Key="PrimaryDark">#1C2B1B</Color>
+            <Color x:Key="Accent">#B5B210</Color>
+            <Color x:Key="AccentTwo">#8EB12A</Color>
+            <Style x:Key="ThemeColor" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{x:DynamicResource Background}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
